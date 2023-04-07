@@ -1,19 +1,101 @@
-![Logo](https://raw.githubusercontent.com/AmberG31/Potty-pal/main/frontend/public/mini-logo.svg)
+<a name="readme-top"></a>
 
-# Potty-Pals
+<br />
+<!-- PROJECT LOGO -->
+<div align="center">
+  <a href="https://github.com/terryhycheng/acebook">
+    <img src="https://raw.githubusercontent.com/terryhycheng/potty-pal/main/frontend/public/mini-logo.svg" alt="Logo" width="60" height="60">
+  </a>
 
-Potty Pals is a toilet finding web app. It has a number of features that can be easily accessed from a UI to generate a list of toilets in a particular location. The app displays the 'Potty Pal' logo, as a pins on a map with easy to read pop-ups offering information about specific toilets, including facilities, pricing and ratings.
+<h3 align="center">PottyPal</h3>
+<p>A MERN Stack Toilet Finding App</p>
 
-## Features
+  <p align="center">
+    <a href="https://potty-pal-frontend.onrender.com/">💻 View Demo</a>
+    ·
+    <a href="https://docs.google.com/presentation/d/18HRkplZd6_S4CVVg7y47VUbVzs6aihjLZcJ3n5it9aM/edit?usp=sharing">🚀 Presentation Deck</a>
+    ·
+    <a href="https://github.com/terryhycheng/potty-pal/issues">⚡ Report Bug</a>
+  </p>
+</div>
 
-- Login/Sign-Up
-- Add toilet
-- Review Toilet
-- Add toilet image
-- View Toilets
-- Map Pin with geolocation
+<!-- TABLE OF CONTENTS -->
 
-## Prerequisites
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [About the Project](#about-the-project)
+  - [Features](#features)
+  - [Tech Stack](#tech-stack)
+- [Infrastructure](#infrastructure)
+  - [App Diagram](#app-diagram)
+  - [Database Diagram](#database-diagram)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+    - [Clone the project](#clone-the-project)
+    - [Install packages](#install-packages)
+    - [Setup `.env` files](#setup-env-files)
+  - [Start](#start)
+    - [Run the app](#run-the-app)
+- [Contributors](#contributors)
+
+<!-- ABOUT THE PROJECT -->
+
+## About the Project
+
+![privew](frontend/public/pottypal-preview.png)
+
+PottyPal is a toilet finding web app. It has a number of features that can be easily accessed from a UI to generate a list of toilets in a particular location. The app displays the 'Potty Pal' logo, as a pins on a map with easy to read pop-ups offering information about specific toilets, including facilities, pricing and ratings.
+
+### Features
+
+- **View toilets on a map**: Pottypal provides a map for users to view a list of toilets in an esay way
+- **Add toilets**: Users are able to add new toilets with name, price, features and address
+- **Add reviews to a toilet**: Users are able to add reviews to each toilet
+- **Updload images of the toilet**: Pottypal can handle multiple image upload up to 5MB
+- **Authentication**: Users are able to log in / sign up
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Tech Stack
+
+This project was built with the following tools:
+
+- [![React][react-shield]][react-url]
+- [![mongodb][mongodb-shield]][mongodb-url]
+- [![express][express-shield]][express-url]
+- [![tailwindcss][tailwindcss-shield]][tailwindcss-url]
+- [![Cypress][cypress-shield]][cypress-url]
+- [![Jest][jest-shield]][jest-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Infrastructure
+
+### App Diagram
+
+The diagram below shows the relationships among all parties, including `OpenStreetMap` and `Nominatim API`.
+
+![app-diagram](frontend/public/app-diagram.png)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Database Diagram
+
+Even though we used `mongoDB` which is a non-SQL database for PottyPal, we still picked SQL diagram as the tool to show the relationships among documents during the planning stage.
+
+![db-diagram](frontend/public/potty-pal-db-diagram.png)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## Getting Started
+
+This section shows you how to set up this project locally. First, get a local copy up and running follow these simple steps.
+
+### Prerequisites
 
 You have to make sure that `mongodb`, `npm` and `node` have been installed in your local machine before running the project. If not, follow the steps below.
 
@@ -38,73 +120,67 @@ You have to make sure that `mongodb`, `npm` and `node` have been installed in yo
   brew install mongodb-community@5.0
   brew services start mongodb-community@5.0
   ```
+  <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
----
+### Installation
 
-## Running Tests
-
-To run tests, run the following commands
-
-```bash
-  cd backend
-
-  npm run test
-```
+#### Clone the project
 
 ```bash
-  cd frontend
-
-  npm run test
+  git clone https://github.com/terryhycheng/potty-pal
 ```
 
-## Run Locally
-
-Clone the project
+#### Install packages
 
 ```bash
-  git clone https://github.com/AmberG31/Potty-pal
+cd potty-pal
+npm run install
 ```
 
-Go to the backend directory
+#### Setup `.env` files
+
+Before running the app, two `.env` has to be set up. The following lines are the template.
 
 ```bash
-  cd backend
+# backend/.env
+JWT_SECRET=
+MONGODB_URL=
+
+# frontend/.env
+REACT_APP_API_URL="http://localhost:8080" # or change it to a deployed server url
 ```
 
-Install dependencies
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-```bash
-  npm install
-```
+### Start
 
-Go to the frontend directory
+#### Run the app
 
-```bash
-  cd frontend
-```
-
-Install dependencies
-
-```bash
-  npm install
-```
-
-Start the server
+We installed `concurrently` so one command can run both the frontend and backend server. Port `3000` and `8080` are the default ports.
 
 ```bash
   npm run start
 ```
 
-## Tech Stack
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This project was built with the following tools:
+<!-- CONTRIBUTORS -->
 
-- [![React][react-shield]][react-url]
-- [![mongodb][mongodb-shield]][mongodb-url]
-- [![express][express-shield]][express-url]
-- [![tailwindcss][tailwindcss-shield]][tailwindcss-url]
-- [![Cypress][cypress-shield]][cypress-url]
-- [![Jest][jest-shield]][jest-url]
+## Contributors
+
+We are team `PottyPal`, a team of five amazing, passionate and lovely software developers who care about toilets so much that we made an application for it.
+
+<table>
+  <tr>
+   <td align="center"><a href="https://github.com/AmberG31"><img src="https://avatars.githubusercontent.com/u/118190812?v=4" width="150" alt="Amber"/><br />Amber</a></td>
+   <td align="center"><a href="https://github.com/pieslappa"><img src="https://avatars.githubusercontent.com/u/34448070?v=4" width="150" alt="Chris%20Leech"/><br />Chris Leech</a></td>
+   <td align="center"><a href="https://github.com/ChalkandFeather"><img src="https://avatars.githubusercontent.com/u/114813829?v=4" width="150" alt="Marie%20Taylor"/><br />Marie Taylor</a></td>
+    <td align="center"><a href="hhttps://github.com/moeid9"><img src="https://avatars.githubusercontent.com/u/119462140?v=4" width="150" alt="Moeid%20Haider"/><br />Moeid Haider</a></td>
+   <td align="center"><a href="https://github.com/terryhycheng"><img src="https://avatars.githubusercontent.com/u/35667554?v=4" width="150" alt="Terry%20Cheng"/><br />Terry Cheng</a></td>
+  </tr>
+</table>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 [typescript-shield]: https://img.shields.io/badge/Typescript-3178c6?style=for-the-badge&logo=typescript&logoColor=white
 [typescript-url]: https://www.typescriptlang.org/
