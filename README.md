@@ -175,7 +175,7 @@ We are team `PottyPal`, a team of five amazing, passionate and lovely software d
    <td align="center"><a href="https://github.com/AmberG31"><img src="https://avatars.githubusercontent.com/u/118190812?v=4" width="150" alt="Amber"/><br />Amber</a></td>
    <td align="center"><a href="https://github.com/pieslappa"><img src="https://avatars.githubusercontent.com/u/34448070?v=4" width="150" alt="Chris%20Leech"/><br />Chris Leech</a></td>
    <td align="center"><a href="https://github.com/ChalkandFeather"><img src="https://avatars.githubusercontent.com/u/114813829?v=4" width="150" alt="Marie%20Taylor"/><br />Marie Taylor</a></td>
-    <td align="center"><a href="hhttps://github.com/moeid9"><img src="https://avatars.githubusercontent.com/u/119462140?v=4" width="150" alt="Moeid%20Haider"/><br />Moeid Haider</a></td>
+  <td align="center"><a href="https://github.com/moeid9"><img src="https://avatars.githubusercontent.com/u/119462140?v=4" width="150" alt="Moeid%20Haider"/><br />Moeid Haider</a></td>
    <td align="center"><a href="https://github.com/terryhycheng"><img src="https://avatars.githubusercontent.com/u/35667554?v=4" width="150" alt="Terry%20Cheng"/><br />Terry Cheng</a></td>
   </tr>
 </table>
