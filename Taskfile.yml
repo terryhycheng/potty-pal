@@ -1,0 +1,18 @@
+version: "3.10"
+
+tasks:
+  01-build:
+    cmds:
+    - docker compose build
+  01-1-build-no-cache:
+    cmds:
+    - docker compose build --no-cache
+  02-start:
+    cmds:
+    - docker compose up -d
+  03-stop:
+    cmds:
+    - docker compose down
+  04-restart:
+    cmds:
+    - docker compose restart
