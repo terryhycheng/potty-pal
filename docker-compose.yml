@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  frontend-react:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    environment:
+      - REACT_APP_API_URL=http://localhost:8081
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend-express
+    networks:
+      - pottypal-network
+
+  backend-express:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    env_file:
+      - backend/.env
+    ports:
+      - "8081:8080"
+    networks:
+      - pottypal-network
+
+networks:
+  pottypal-network:
+    driver: bridge

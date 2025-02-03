@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "install": "cd frontend && npm install && cd ../backend && npm install",
-    "start": "concurrently \"cd frontend && npm run start\" \"cd backend && npm run start\""
+    "install": "cd frontend && bun install && cd ../backend && bun install",
+    "start": "concurrently \"cd frontend && bun start\" \"cd backend && bun start\""
   },
   "repository": {
     "type": "git",
