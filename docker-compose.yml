@@ -2,22 +2,28 @@ version: "3.8"
 
 services:
   frontend-react:
+    restart: always
     build:
       context: ./frontend
       dockerfile: Dockerfile
     ports:
-      - "5677:3000"
+      - "3010:3000"
     depends_on:
       - backend-express
+    environment:
+      REACT_APP_API_URL: http://localhost:8010
     networks:
       - pottypal-network
 
   backend-express:
+    restart: always
     build:
       context: ./backend
       dockerfile: Dockerfile
+    env_file:
+      - backend/.env
     ports:
-      - "8081:8080"
+      - "8010:8080"
     networks:
       - pottypal-network
 
