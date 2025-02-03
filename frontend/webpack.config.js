@@ -1,5 +1,6 @@
 module.exports = {
   devServer: {
-    allowedHosts: 'all',
+    compress: true,
+    disableHostCheck: true, // That solved it
   },
 };
