@@ -1,0 +1,45 @@
+# Dependencies
+node_modules
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Build files
+dist
+build
+
+# Environment files
+.env
+.env.*
+
+# IDE and Editor files
+.idea
+.vscode
+*.swp
+*.swo
+.DS_Store
+
+# Test files
+__tests__
+*.test.ts
+*.spec.ts
+coverage
+
+# Git
+.git
+.gitignore
+
+# TypeScript source maps
+*.map
+
+# Logs
+logs
+*.log
+
+# Misc
+README.md
+.npm
+.eslintcache
+
+# MongoDB data
+data 
